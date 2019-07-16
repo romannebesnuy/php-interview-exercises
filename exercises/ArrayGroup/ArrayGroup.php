@@ -47,24 +47,23 @@ final class ArrayGroup
 
     protected static function try3(array $array, int $size)
     {
-        $a = self::slice3($array, $size);
-
-        print_r(
-            [[1, 2, 3], [4, 5]],
-            $a
-        );exit;
+        $a = [];
+        self::slice3($array, $size, $a);
         return $a;
     }
 
-    protected static function slice3(array $array, int $size)
+    protected static function slice3(array $array, int $size, &$a)
     {
         if (count($array) > $size) {
             $array_slice = array_slice($array, 0, $size);
-            $array_last = array_diff($array, $array_slice);
+            $array_last = array_slice($array, $size);
 
-            return [$array_slice, self::slice3($array_last, $size)];
+            $a[] = $array_slice;
+
+            self::slice3($array_last, $size, $a);
+        } else {
+            $a[] = $array;
         }
 
-        return $array;
     }
 }

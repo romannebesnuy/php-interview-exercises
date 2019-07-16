@@ -1,28 +1,33 @@
 {
-  "name": "azdanov/questions",
-  "type": "project",
-  "description": "Exercises to prepare for an interview",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Anton Zdanov",
-      "email": "azdanov@pm.me"
+    "name": "azdanov/questions",
+    "type": "project",
+    "description": "Exercises to prepare for an interview",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anton Zdanov",
+            "email": "azdanov@pm.me"
+        }
+    ],
+    "require": {
+        "illuminate/support": "5.5.*"
+    },
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "0.26.2",
+        "phpunit/phpunit": "8.2.4",
+        "spatie/phpunit-watcher": "1.8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Exercises\\": "exercises/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     }
-  ],
-  "require": {},
-  "require-dev": {
-    "codedungeon/phpunit-result-printer": "0.26.2",
-    "phpunit/phpunit": "8.2.4",
-    "spatie/phpunit-watcher": "1.8.3"
-  },
-  "autoload": {
-    "psr-4": {
-      "Exercises\\": "exercises/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
-    }
-  }
 }
