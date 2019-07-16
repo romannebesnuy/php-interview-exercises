@@ -12,6 +12,7 @@ final class SearchCompleteTest extends TestCase
 {
     public function testHasMethods(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(SearchComplete::class, 'linear'),
             'Class does not have static method linear'
@@ -24,6 +25,7 @@ final class SearchCompleteTest extends TestCase
 
     public function testLinear(): void
     {
+        self::markTestSkipped();
         self::assertSame(
             5,
             SearchComplete::linear([34, 51, 1, 2, 3, 45, 56, 687], 45)
@@ -36,6 +38,7 @@ final class SearchCompleteTest extends TestCase
 
     public function testBinary(): void
     {
+        self::markTestSkipped();
         self::assertSame(
             5,
             SearchComplete::binary([34, 51, 1, 2, 3, 45, 56, 687], 45)
@@ -48,6 +51,7 @@ final class SearchCompleteTest extends TestCase
 
     public function testNaive(): void
     {
+        self::markTestSkipped();
         self::assertSame(3, SearchComplete::naive('ox mox pox', 'ox'));
         self::assertSame(0, SearchComplete::naive('ox mox pox', 'box'));
     }

@@ -13,12 +13,14 @@ final class NodeCompleteTest extends TestCase
 {
     public function testHasProperties(): void
     {
+        self::markTestSkipped();
         self::assertClassHasAttribute('children', NodeComplete::class);
         self::assertClassHasAttribute('data', NodeComplete::class);
     }
 
     public function testHasMethods(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(NodeComplete::class, 'add'),
             'Class does not have method add'
@@ -31,6 +33,7 @@ final class NodeCompleteTest extends TestCase
 
     public function testHasData(): void
     {
+        self::markTestSkipped();
         $node = new NodeComplete(10);
 
         self::assertSame(10, $node->data);
@@ -38,6 +41,7 @@ final class NodeCompleteTest extends TestCase
 
     public function testCanAdd(): void
     {
+        self::markTestSkipped();
         $node = new NodeComplete(10);
 
         $node->add(20);
@@ -48,6 +52,7 @@ final class NodeCompleteTest extends TestCase
 
     public function testCanAddMultiple(): void
     {
+        self::markTestSkipped();
         $node = new NodeComplete(10);
 
         $node->add(20);
@@ -60,6 +65,7 @@ final class NodeCompleteTest extends TestCase
 
     public function testCanRemove(): void
     {
+        self::markTestSkipped();
         $node = new NodeComplete(10);
         $node->add(20);
         self::assertSame(20, $node->children[0]->data);
@@ -71,6 +77,7 @@ final class NodeCompleteTest extends TestCase
 
     public function testCanRemoveMultiple(): void
     {
+        self::markTestSkipped();
         $node = new NodeComplete(10);
         $node->add(20);
         $node->add(30);

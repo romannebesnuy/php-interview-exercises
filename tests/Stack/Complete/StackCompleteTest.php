@@ -20,6 +20,7 @@ final class StackCompleteTest extends TestCase
 
     public function testHasMethods(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(StackComplete::class, 'push'),
             'Class does not have method push'
@@ -36,11 +37,13 @@ final class StackCompleteTest extends TestCase
 
     public function testCanCreateObject(): void
     {
+        self::markTestSkipped();
         self::assertIsObject($this->stack);
     }
 
     public function testCanPush(): void
     {
+        self::markTestSkipped();
         $this->stack->push(1);
         $this->stack->push(2);
         $this->stack->push(3);
@@ -49,6 +52,7 @@ final class StackCompleteTest extends TestCase
 
     public function testCanPop(): void
     {
+        self::markTestSkipped();
         $this->stack->push(1);
         $this->stack->push(2);
         $this->stack->push(3);
@@ -60,6 +64,7 @@ final class StackCompleteTest extends TestCase
 
     public function testCanPeek(): void
     {
+        self::markTestSkipped();
         self::assertNull($this->stack->peek());
         $this->stack->push(1);
         $this->stack->push(2);

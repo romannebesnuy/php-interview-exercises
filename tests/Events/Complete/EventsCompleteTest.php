@@ -12,11 +12,13 @@ final class EventsCompleteTest extends TestCase
 {
     public function testHasProperty(): void
     {
+        self::markTestSkipped();
         self::assertClassHasAttribute('events', EventsComplete::class);
     }
 
     public function testHasMethods(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(EventsComplete::class, 'on'),
             'Class does not have method on'
@@ -33,6 +35,7 @@ final class EventsCompleteTest extends TestCase
 
     public function testOnAndFire(): void
     {
+        self::markTestSkipped();
         $counter = 0;
         $events = new EventsComplete();
 
@@ -48,6 +51,7 @@ final class EventsCompleteTest extends TestCase
 
     public function testOnAndFireMultipleCallbacks(): void
     {
+        self::markTestSkipped();
         $counter = 0;
         $events = new EventsComplete();
         $callback1 = static function () use (&$counter): void {
@@ -66,6 +70,7 @@ final class EventsCompleteTest extends TestCase
 
     public function testOnAndFireMultipleTimes(): void
     {
+        self::markTestSkipped();
         $counter = 0;
         $events = new EventsComplete();
         $callback1 = static function () use (&$counter): void {
@@ -86,6 +91,7 @@ final class EventsCompleteTest extends TestCase
 
     public function testOnAndFireWithDifferentNames(): void
     {
+        self::markTestSkipped();
         $counter = 0;
         $events = new EventsComplete();
         $callback1 = static function () use (&$counter): void {
@@ -107,6 +113,7 @@ final class EventsCompleteTest extends TestCase
 
     public function testOff(): void
     {
+        self::markTestSkipped();
         $counter = 0;
         $events = new EventsComplete();
         $callback1 = static function () use (&$counter): void {

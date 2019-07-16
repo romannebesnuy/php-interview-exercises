@@ -20,11 +20,13 @@ final class TreeCompleteTest extends TestCase
 
     public function testHasRootProperty(): void
     {
+        self::markTestSkipped();
         self::assertObjectHasAttribute('root', $this->tree);
     }
 
     public function testTraverseBreadthFirst(): void
     {
+        self::markTestSkipped();
         $letters = [];
         $this->tree->root = new NodeComplete('1a');
         $this->tree->root->add('2b');
@@ -41,6 +43,7 @@ final class TreeCompleteTest extends TestCase
 
     public function testTraverseDepthFirst(): void
     {
+        self::markTestSkipped();
         $letters = [];
         $this->tree->root = new NodeComplete('1a');
         $this->tree->root->add('2b');
@@ -57,6 +60,7 @@ final class TreeCompleteTest extends TestCase
 
     public function testLevelWidth1(): void
     {
+        self::markTestSkipped();
         $this->tree->root = new NodeComplete(0);
         $this->tree->root->add(1);
         $this->tree->root->add(2);
@@ -69,6 +73,7 @@ final class TreeCompleteTest extends TestCase
 
     public function testLevelWidth2(): void
     {
+        self::markTestSkipped();
         $this->tree->root = new NodeComplete(0);
         $this->tree->root->add(1);
         $this->tree->root->children[0]->add(2);

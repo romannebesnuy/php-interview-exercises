@@ -11,6 +11,7 @@ final class NodeCompleteTest extends TestCase
 {
     public function testCanCreateNode(): void
     {
+        self::markTestSkipped();
         $tail = new NodeComplete(1, new NodeComplete(2));
 
         self::assertSame(1, $tail->data);

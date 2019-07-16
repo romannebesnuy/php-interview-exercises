@@ -21,6 +21,7 @@ final class SortCompleteTest extends TestCase
 
     public function testHasMethods(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(SortComplete::class, 'bubble'),
             'Class does not have method bubble'
@@ -57,22 +58,26 @@ final class SortCompleteTest extends TestCase
 
     public function testBubbleSort(): void
     {
+        self::markTestSkipped();
         self::assertSame($this->sorted, SortComplete::bubble($this->input));
     }
 
     public function testSelectionSort(): void
     {
+        self::markTestSkipped();
         self::assertSame($this->sorted, SortComplete::selection($this->input));
     }
 
     public function testInsertionSort(): void
     {
+        self::markTestSkipped();
         self::assertSame($this->sorted, SortComplete::insertion($this->input));
     }
 
     /** @throws ReflectionException */
     public function testMergerHelper(): void
     {
+        self::markTestSkipped();
         $left = [1, 9];
         $right = [3, 7, 10];
 
@@ -83,22 +88,26 @@ final class SortCompleteTest extends TestCase
 
     public function testMergeSort(): void
     {
+        self::markTestSkipped();
         self::assertSame($this->sorted, SortComplete::merge($this->input));
     }
 
     public function testQuick1Sort(): void
     {
+        self::markTestSkipped();
         self::assertSame($this->sorted, SortComplete::quick1($this->input));
     }
 
     public function testQuick2Sort(): void
     {
+        self::markTestSkipped();
         SortComplete::quick2($this->input);
         self::assertSame($this->sorted, $this->input);
     }
 
     public function testRadixSort(): void
     {
+        self::markTestSkipped();
         self::assertSame([ 12, 23, 345, 2345, 5467, 9852 ], SortComplete::radix([23, 345, 5467, 12, 2345, 9852]));
     }
 }

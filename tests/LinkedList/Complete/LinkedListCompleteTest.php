@@ -20,6 +20,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testInsertFirst(): void
     {
+        self::markTestSkipped();
         $this->list->insertFirst(0);
         $this->list->insertFirst(1);
         $this->list->insertFirst(2);
@@ -31,6 +32,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testInsertLast(): void
     {
+        self::markTestSkipped();
         $this->list->insertLast(0);
         $this->list->insertLast(1);
         $this->list->insertLast(2);
@@ -42,6 +44,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testSize(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(0, new NodeComplete(1));
 
         self::assertSame(2, $this->list->size());
@@ -49,6 +52,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testGetFirst(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(0, new NodeComplete(1));
 
         $first = $this->list->getFirst();
@@ -59,6 +63,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testGetLast(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(0, new NodeComplete(1));
 
         $last = $this->list->getLast();
@@ -68,6 +73,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testClear(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(0, new NodeComplete(1));
 
         $this->list->clear();
@@ -78,6 +84,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testRemoveFirst(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2))
@@ -93,12 +100,14 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testRemoveFirstEmpty(): void
     {
+        self::markTestSkipped();
         $this->list->removeFirst();
         self::assertTrue(true);
     }
 
     public function testRemoveLast(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2))
@@ -113,12 +122,14 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testRemoveLastEmpty(): void
     {
+        self::markTestSkipped();
         $this->list->removeLast();
         self::assertTrue(true);
     }
 
     public function testGetAt(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2))
@@ -133,6 +144,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testGetAtEmpty(): void
     {
+        self::markTestSkipped();
         $first = $this->list->getAt(0);
         self::assertNull($first);
 
@@ -142,6 +154,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testRemoveAtEmpty(): void
     {
+        self::markTestSkipped();
         $this->list->removeAt(0);
         $this->list->removeAt(1);
         $this->list->removeAt(2);
@@ -150,6 +163,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testRemoveAtOutOfBound(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(0);
 
         $this->list->removeAt(1);
@@ -160,6 +174,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testRemoveAtFirst(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
@@ -176,6 +191,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testRemoveAtIndex(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
@@ -192,6 +208,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testRemoveAtLast(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
@@ -208,6 +225,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testInsertAtEmpty(): void
     {
+        self::markTestSkipped();
         $this->list->insertAt('a', 0);
 
         self::assertSame('a', $this->list->head->data);
@@ -215,6 +233,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testInsertAtNegativeOutOfBound(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
@@ -228,6 +247,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testInsertAt0(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
@@ -241,6 +261,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testInsertAtMiddle(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
@@ -257,6 +278,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testInsertAtLast(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(0, new NodeComplete(1));
 
         $this->list->insertAt('hi', 2);
@@ -268,6 +290,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testInsertAtOutOfBound(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(0, new NodeComplete(1));
 
         $this->list->insertAt('hi', 20);
@@ -279,6 +302,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testForEach(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
@@ -299,6 +323,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testForEachAs(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
@@ -319,6 +344,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testForEachAsEmpty(): void
     {
+        self::markTestSkipped();
         foreach ($this->list as $item) {
             $item->data *= 10;
         }
@@ -327,6 +353,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testMidpointEmpty(): void
     {
+        self::markTestSkipped();
         $midpoint = LinkedListComplete::midpoint($this->list);
 
         self::assertNull($midpoint);
@@ -334,6 +361,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testMidpointOne(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(0);
 
         $midpoint = LinkedListComplete::midpoint($this->list);
@@ -343,6 +371,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testMidpointTwo(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(0, new NodeComplete(1));
 
         $midpoint = LinkedListComplete::midpoint($this->list);
@@ -352,6 +381,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testMidpointOdd(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2))
@@ -364,6 +394,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testMidpointEven(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
@@ -376,11 +407,13 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testCircularEmpty(): void
     {
+        self::markTestSkipped();
         self::assertFalse(LinkedListComplete::circular($this->list));
     }
 
     public function testCircular(): void
     {
+        self::markTestSkipped();
         $list = new LinkedListComplete();
         $a = new NodeComplete('a');
         $b = new NodeComplete('b');
@@ -396,6 +429,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testCircularHead(): void
     {
+        self::markTestSkipped();
         $list = new LinkedListComplete();
         $a = new NodeComplete('a');
         $b = new NodeComplete('b');
@@ -411,6 +445,7 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testNonCircular(): void
     {
+        self::markTestSkipped();
         $list = new LinkedListComplete();
         $a = new NodeComplete('a');
         $b = new NodeComplete('b');
@@ -426,11 +461,13 @@ final class LinkedListCompleteTest extends TestCase
 
     public function testFromLastEmpty(): void
     {
+        self::markTestSkipped();
         self::assertNull(LinkedListComplete::fromLast($this->list, 2));
     }
 
     public function testFromLast(): void
     {
+        self::markTestSkipped();
         $this->list->head = new NodeComplete(
             0,
             new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))

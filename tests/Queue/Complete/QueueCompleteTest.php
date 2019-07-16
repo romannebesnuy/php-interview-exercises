@@ -20,6 +20,7 @@ final class QueueCompleteTest extends TestCase
 
     public function testHasMethods(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(QueueComplete::class, 'add'),
             'Class does not have method add'
@@ -40,11 +41,13 @@ final class QueueCompleteTest extends TestCase
 
     public function testCanCreateObject(): void
     {
+        self::markTestSkipped();
         self::assertIsObject($this->queue);
     }
 
     public function testCanAdd(): void
     {
+        self::markTestSkipped();
         $this->queue->add(1);
         $this->queue->add(2);
         $this->queue->add(3);
@@ -54,6 +57,7 @@ final class QueueCompleteTest extends TestCase
 
     public function testCanRemove(): void
     {
+        self::markTestSkipped();
         $this->queue->add(1);
         $this->queue->add(2);
         $this->queue->add(3);
@@ -66,6 +70,7 @@ final class QueueCompleteTest extends TestCase
 
     public function testCanPeek(): void
     {
+        self::markTestSkipped();
         self::assertNull($this->queue->peek());
         $this->queue->add(1);
         $this->queue->add(2);
@@ -79,6 +84,7 @@ final class QueueCompleteTest extends TestCase
 
     public function testCanZip(): void
     {
+        self::markTestSkipped();
         $queue1 = new QueueComplete();
         $queue2 = new QueueComplete();
 

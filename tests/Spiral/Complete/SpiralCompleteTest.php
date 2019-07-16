@@ -11,16 +11,19 @@ final class SpiralCompleteTest extends TestCase
 {
     public function testCanPrint1x1(): void
     {
+        self::markTestSkipped();
         self::assertEquals([[1]], SpiralComplete::make(1));
     }
 
     public function testCanPrint2x2(): void
     {
+        self::markTestSkipped();
         self::assertEquals([[1, 2], [4, 3]], SpiralComplete::make(2));
     }
 
     public function testCanPrint3x3(): void
     {
+        self::markTestSkipped();
         self::assertEquals([
             [1, 2, 3],
             [8, 9, 4],
@@ -30,6 +33,7 @@ final class SpiralCompleteTest extends TestCase
 
     public function testCanPrint4x4(): void
     {
+        self::markTestSkipped();
         self::assertEquals([
             [1, 2, 3, 4],
             [12, 13, 14, 5],

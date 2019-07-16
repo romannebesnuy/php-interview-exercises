@@ -11,11 +11,13 @@ final class CapitalizeCompleteTest extends TestCase
 {
     public function testCapitalizeFirst1(): void
     {
+        self::markTestSkipped();
         self::assertSame('Hello There', CapitalizeComplete::get1('hello there'));
     }
 
     public function testCapitalizeFirst2(): void
     {
+        self::markTestSkipped();
         self::assertSame(
             "Hey, So It's Working!",
             CapitalizeComplete::get1("hey, so it's working!")
@@ -24,11 +26,13 @@ final class CapitalizeCompleteTest extends TestCase
 
     public function testCapitalizeSecond1(): void
     {
+        self::markTestSkipped();
         self::assertSame('Hello There', CapitalizeComplete::get2('hello there'));
     }
 
     public function testCapitalizeSecond2(): void
     {
+        self::markTestSkipped();
         self::assertSame(
             "Hey, So It's Working!",
             CapitalizeComplete::get2("hey, so it's working!")

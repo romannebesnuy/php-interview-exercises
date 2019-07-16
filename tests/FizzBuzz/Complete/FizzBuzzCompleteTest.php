@@ -11,6 +11,7 @@ final class FizzBuzzCompleteTest extends TestCase
 {
     public function testPrintFizzBuzz(): void
     {
+        self::markTestSkipped();
         $this->expectOutputString('12fizz4buzzfizz78fizzbuzz11fizz1314fizzbuzz');
         FizzBuzzComplete::print(15);
     }

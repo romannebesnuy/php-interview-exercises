@@ -12,6 +12,7 @@ final class BinarySearchTreeCompleteTest extends TestCase
 {
     public function testHasProperties(): void
     {
+        self::markTestSkipped();
         self::assertClassHasAttribute('data', BinarySearchTreeComplete::class);
         self::assertClassHasAttribute('left', BinarySearchTreeComplete::class);
         self::assertClassHasAttribute('right', BinarySearchTreeComplete::class);
@@ -19,6 +20,7 @@ final class BinarySearchTreeCompleteTest extends TestCase
 
     public function testHasMethods(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(BinarySearchTreeComplete::class, 'insert'),
             'Class does not have method insert'
@@ -31,6 +33,7 @@ final class BinarySearchTreeCompleteTest extends TestCase
 
     public function testCanInsert(): void
     {
+        self::markTestSkipped();
         $node = new BinarySearchTreeComplete(10);
 
         $node->insert(5);
@@ -44,6 +47,7 @@ final class BinarySearchTreeCompleteTest extends TestCase
 
     public function testContains(): void
     {
+        self::markTestSkipped();
         $node = new BinarySearchTreeComplete(10);
 
         $node->insert(5);
@@ -60,6 +64,7 @@ final class BinarySearchTreeCompleteTest extends TestCase
 
     public function testValidateAValidTree(): void
     {
+        self::markTestSkipped();
         $node = new BinarySearchTreeComplete(10);
 
         $node->insert(5);
@@ -72,6 +77,7 @@ final class BinarySearchTreeCompleteTest extends TestCase
 
     public function testValidateAnInvalidTree(): void
     {
+        self::markTestSkipped();
         $node = new BinarySearchTreeComplete(10);
 
         $node->insert(5);
@@ -94,6 +100,7 @@ final class BinarySearchTreeCompleteTest extends TestCase
      */
     public function testDepthFirstInOrder(): void
     {
+        self::markTestSkipped();
         $node = new BinarySearchTreeComplete(10);
 
         $node->insert(5);
@@ -117,6 +124,7 @@ final class BinarySearchTreeCompleteTest extends TestCase
      */
     public function testDepthFirstPostOrder(): void
     {
+        self::markTestSkipped();
         $node = new BinarySearchTreeComplete(10);
 
         $node->insert(5);
@@ -140,6 +148,7 @@ final class BinarySearchTreeCompleteTest extends TestCase
      */
     public function testDepthFirstPreOrder(): void
     {
+        self::markTestSkipped();
         $node = new BinarySearchTreeComplete(10);
 
         $node->insert(5);

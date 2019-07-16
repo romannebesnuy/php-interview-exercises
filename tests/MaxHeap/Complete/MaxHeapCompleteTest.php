@@ -20,6 +20,7 @@ final class MaxHeapCompleteTest extends TestCase
 
     public function testHasMethods(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(MaxHeapComplete::class, 'insert'),
             'Class does not have method insert'
@@ -32,6 +33,7 @@ final class MaxHeapCompleteTest extends TestCase
 
     public function testCanInsertValuesInCorrectOrder(): void
     {
+        self::markTestSkipped();
         $this->heap->insert(41);
         $this->heap->insert(39);
         $this->heap->insert(33);
@@ -52,6 +54,7 @@ final class MaxHeapCompleteTest extends TestCase
 
     public function testCanExtractMaxAndOrder(): void
     {
+        self::markTestSkipped();
         $this->heap->insert(41);
         $this->heap->insert(39);
         $this->heap->insert(33);
